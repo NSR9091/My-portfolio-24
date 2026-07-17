@@ -45,15 +45,12 @@ html {
 body {
   margin: 0;
   font-family: 'DM Sans', sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(143, 123, 183, 0.14), transparent 24%),
-    radial-gradient(circle at 90% 90%, rgba(189, 167, 226, 0.12), transparent 20%),
-    linear-gradient(135deg, #fcf9ff 0%, #efe4f9 100%);
+  background: linear-gradient(135deg, #fcf9ff 0%, #efe4f9 100%);
   color: var(--text);
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
-  transition: background 0.25s ease, color 0.25s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 body.entry-locked {
@@ -70,55 +67,15 @@ body.dark {
 body::before,
 body::after {
   content: '';
-  position: fixed;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  background: rgba(143, 123, 183, 0.12);
-  filter: blur(28px);
-  z-index: -1;
-  animation: drift 10s ease-in-out infinite;
-}
-
-body::before {
-  top: -60px;
-  left: -40px;
-  box-shadow: 0 0 80px rgba(143, 123, 183, 0.12);
-}
-
-body::after {
-  bottom: -70px;
-  right: -50px;
-  animation-duration: 12s;
-  box-shadow: 0 0 80px rgba(189, 167, 226, 0.12);
+  display: none;
 }
 
 .ambient-orbs {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.ambient-orbs::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
-  background-size: 90px 90px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent);
-  opacity: 0.16;
+  display: none;
 }
 
 .orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(8px);
-  opacity: 0.45;
-  animation: floatOrb 8s ease-in-out infinite;
+  display: none;
 }
 
 .orb-one {
@@ -230,21 +187,21 @@ body.dark .theme-toggle {
 
 .sparkle {
   position: absolute;
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: var(--accent);
-  opacity: 0.65;
-  animation: sparkleFloat 3.2s ease-in-out infinite;
+  opacity: 0.7;
+  animation: sparkleFloat 3s ease-in-out infinite;
   animation-delay: var(--delay, 0s);
 }
 
 .sparkle::before {
   content: '';
   position: absolute;
-  inset: -5px;
+  inset: -4px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   opacity: 0.8;
 }
 
@@ -256,8 +213,8 @@ body.dark .theme-toggle {
   place-items: center;
   padding: 24px;
   background: rgba(17, 12, 29, 0.72);
-  backdrop-filter: blur(10px);
-  transition: opacity 0.35s ease, visibility 0.35s ease;
+  backdrop-filter: blur(8px);
+  transition: opacity 0.25s ease, visibility 0.25s ease;
 }
 
 body.entered .entry-overlay {
@@ -329,15 +286,8 @@ body.dark .entry-card {
   padding: 32px;
   position: relative;
   z-index: 1;
-  opacity: 0;
-  transform: translateY(12px) scale(0.98);
-  pointer-events: none;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-body.entered .page-shell {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: none;
   pointer-events: auto;
 }
 
@@ -433,17 +383,9 @@ body.entered .page-shell {
 .sidebar-section {
   position: relative;
   overflow: hidden;
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.25s ease;
-  transition-delay: var(--reveal-delay, 0ms);
-}
-
-.topbar.visible,
-.panel.visible,
-.sidebar-section.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  transition: box-shadow 0.2s ease;
 }
 
 body.scrolling-down .topbar,
