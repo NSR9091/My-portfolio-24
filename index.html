@@ -9,7 +9,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="entry-locked">
+  <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode" aria-pressed="false">
+    <span class="toggle-icon">🌙</span>
+  </button>
+
+  <div class="sparkles" aria-hidden="true"></div>
+
+  <div class="entry-overlay" id="entryOverlay" role="dialog" aria-modal="true" aria-label="Welcome">
+    <div class="entry-card">
+      <p class="entry-kicker">Welcome</p>
+      <h2>Step into my portfolio</h2>
+      <p>Click below to enter and explore my story, projects, and values.</p>
+      <button class="entry-button" id="enterButton" type="button">Click to enter portfolio</button>
+    </div>
+  </div>
+
   <div class="page-shell">
     <aside class="sidebar">
       <div class="sidebar-brand">
@@ -95,7 +110,14 @@
 
       <section id="about" class="panel">
         <div class="panel-heading">
-          <h3>Career Objective</h3>
+          <h3>Hello! 😊</h3>
+        </div>
+        <p>I’m Nia, a curious and driven commerce student with a growing passion for finance, business, and investment banking. I enjoy learning, exploring new ideas, and building skills that help me grow into a confident professional.</p>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <h3>Career Objective 🎯</h3>
         </div>
         <p>To pursue a career in Investment Banking where I can apply my analytical skills, financial knowledge, and dedication to create value, learn from the best, and grow into a leader who makes a meaningful impact.</p>
       </section>
@@ -103,7 +125,7 @@
       <section id="education" class="panel grid-two">
         <div>
           <div class="panel-heading">
-            <h3>Education</h3>
+            <h3>Education 📚</h3>
           </div>
           <p><strong>Mount Carmel PU College</strong>, Vasanth Nagar, Bengaluru</p>
           <p><em>Pre-University (Commerce Stream)</em></p>
@@ -132,14 +154,14 @@
       <section id="experience" class="panel grid-two">
         <div>
           <div class="panel-heading">
-            <h3>Work Experience</h3>
+            <h3>Work Experience 💼</h3>
           </div>
           <p>No formal work experience yet.</p>
           <p>Actively building skills through self-learning, projects, certifications, and school-level initiatives.</p>
         </div>
         <div>
           <div class="panel-heading">
-            <h3>Projects</h3>
+            <h3>Projects 🌟</h3>
           </div>
           <ul class="feature-list">
             <li>
@@ -157,7 +179,7 @@
       <section class="panel grid-two small-cards">
         <article>
           <div class="panel-heading">
-            <h3>Achievements & Awards</h3>
+            <h3>Achievements & Awards 🏆</h3>
           </div>
           <ul>
             <li>Scored 95% in Class 10</li>
@@ -168,7 +190,7 @@
         </article>
         <article>
           <div class="panel-heading">
-            <h3>Certifications</h3>
+            <h3>Certifications 📝</h3>
           </div>
           <ul>
             <li>Vibe Coding Certification (In Progress)</li>
@@ -180,7 +202,7 @@
 
       <section class="panel hobbies-section">
         <div class="panel-heading">
-          <h3>Hobbies & Interests</h3>
+          <h3>Hobbies & Interests 🎨</h3>
         </div>
         <div class="hobby-grid">
           <div>Investment Banking</div>
@@ -195,7 +217,7 @@
 
       <section class="panel values-section">
         <div class="panel-heading">
-          <h3>Values</h3>
+          <h3>Values ✨</h3>
         </div>
         <div class="value-badges">
           <span>Excellence</span>
@@ -210,7 +232,7 @@
 
       <section id="contact" class="panel contact-panel">
         <div class="panel-heading">
-          <h3>Contact</h3>
+          <h3>Contact 📩</h3>
         </div>
         <p>If you would like to connect, collaborate on a project, or discuss finance and investment banking opportunities, feel free to reach out.</p>
         <a class="cta-button" href="mailto:niasrao@gmail.com">Email Nia</a>
